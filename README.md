@@ -1,14 +1,14 @@
 # learning-heroku
-Passo a passo para levantar uma aplicação em **python** no Heroku.
+Passo a passo para levantar uma aplicação em **python** no Heroku
 
 # Install & Login
-Apenas é preciso fazer estas etapas uma vez.  
+Apenas é preciso fazer estas etapas uma vez  
 
 Instalação: `sudo snap install heroku --classic`  
-Com heroku instalado você pode facilmente linkar um projeto existente ao site Heroku.
+Com heroku instalado você pode facilmente linkar um projeto existente ao site Heroku
 
 Login: `heroku login`  
-Irá abrir uma janela para você confirmar o login.  
+Irá abrir uma janela para você confirmar o login  
 
 # Project Files
 (considerando que você já possui um projeto Git o qual você deseja jogar na web)  
@@ -18,6 +18,7 @@ Arquivos importantes para python:
     * Heroku irá ler deste arquivo a versão de python que deve ser utilizada
   * requirements.txt
     * Heroku irá ler deste arquivo os pacotes a serem instalados no ambiente virtual
+    * Precisa ter este arquivo, mesmo que vazio
 
 # Project Deploy
 `heroku create`  
@@ -32,6 +33,14 @@ Para levantar qualquer mudança para sua aplicação web você deve alterar a br
 
 Se você tentar atualizar sua aplicação sem especificar a linguagem utilizada, heroku irá tentar identificar a linguagem e configurar para você, porém caso ele não consiga você deve configurar na mão  
 `heroku buildpacks:set heroku/python`  
+
+# Open
+Acessa o url da sua aplicação no navegador  
+`heroku open`  
+
+# Logs
+Output dos logs no seu terminal  
+`heroku logs --tail`
 
 # Referências
 https://devcenter.heroku.com/articles/python-runtimes  
